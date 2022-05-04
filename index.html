@@ -1,16 +1,49 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <!-- linking javascript and css files -->
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- title of the window -->
+    <title> Simple interest calculator </title>
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class= "maindiv">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            Amount <input type="number"  id="principal">  <br/><br/>
+            
+            <!-- selector sysle will be range and incremented by 0.25 -->
+            Rate <input type="range"  id="rate" min= "1" max= "20" step= "0.25" value= "10.25" onchange= "updateRate()">
+            <span id= "rate_val">
+                10.25%
+            </span> <br/><br/>
+            <!-- options for pull down menu  -->
+            No. of Years <select id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option> 
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            
+            <br/><br/>
+            <!-- Function is called when button is pressed -->
+            <button onclick="compute()">Compute Interest</button>
+            <br/><br/>
+            <span id= "result">
 
-        <button onclick="compute()">Compute</button>
+            </span>
+        </div>
+        <footer>
+            <br/><br/>
+            <!-- Footer with copyright informations -->
+            &#169; This Calculator belongs to Stigin Starview
+        </footer>
     </body>
 </html>

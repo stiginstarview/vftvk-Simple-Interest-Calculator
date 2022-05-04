@@ -1,4 +1,25 @@
-body {background-color:tan;}
-h1{color:green;}
+/* All the elements in the body is affected by the body attribute  */
+body{
+    background-color:black;
+    font-family:arial;
+    color:white 
+}
 
+/* All h1 files inherites the styles */
+h1{
+    color:grey;
+    font-family: verdana;
+}
+
+/* Everything in this class is inheriting the style */
+.maindiv {
+    background-color: white;
+    color: black;
+    width: 300px;
+    padding: 20px;
+    /* check the align */
+    align: center;
+    border-radius: 25px;
+
+}
 
